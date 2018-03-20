@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.5.RELEASE")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+archivesBaseName = 'platform-node-server'
+
+ext {
+    springBootVar = '1.4.5.RELEASE'
+}
+
+dependencies {
+    compile project(':platform-ca-server')
+
+    // spring boot  
+    compile "org.springframework.boot:spring-boot-starter-web:$springBootVar"
+    testCompile "org.springframework.boot:spring-boot-starter-test:$springBootVar"
+}

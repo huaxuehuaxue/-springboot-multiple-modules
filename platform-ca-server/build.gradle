@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public" }
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.5.RELEASE")
+    }
+}
+
+apply plugin: 'org.springframework.boot'
+
+archivesBaseName = 'platform-ca-server'
+
+
+ext {
+}
+
+/*bootRepackage{
+    enabled = false
+}*/
+//bootRepackage.enabled = false
+
+build{
+}
+
+dependencies {
+}
+
+configurations {
+    // 所有需要忽略的包定义在此
+    //all*.exclude group: 'commons-httpclient'
+    //all*.exclude group: 'commons-beanutils', module: 'commons-beanutils'
+}
