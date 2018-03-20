@@ -17,9 +17,9 @@ archivesBaseName = 'platform-ca-server'
 ext {
 }
 
-/*bootRepackage{
+bootRepackage{
     enabled = false
-}*/
+}
 //bootRepackage.enabled = false
 
 build{
